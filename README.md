@@ -41,3 +41,7 @@ npm run build
 ## License
 
 This personal project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+## References :books:
+
+- [Svelte course](https://platzi.com/clases/svelte/)
