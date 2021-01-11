@@ -1,0 +1,24 @@
+{
+  "name": "personalweb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website for presentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reudavel/personalWeb.git"
+  },
+  "author": "Raul Eudave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reudavel/personalWeb/issues"
+  },
+  "homepage": "https://github.com/Reudavel/personalWeb#readme",
+  "devDependencies": {
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
+  }
+}
