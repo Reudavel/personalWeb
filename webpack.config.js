@@ -7,12 +7,13 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "dist")
     },
+    //Hot to use SCSS
     module: {
         rules:[
             {
-                test: /\.css$/, //file extension
-                use: ["style-loader", "css-loader"] //loaders to use
-                //[inyects css int to DOM, transform css in to javascript]
+                test: /\.scss$/, //file extension
+                use: ["style-loader", "css-loader", "sass-loader"] //loaders to use
+                //[Inyects style into DOM,   Turns CSS in to Javascript,   Transpile SASS in to CSS]
                 //last executes first [3th,2nd,1st...]       
             }
         ]
