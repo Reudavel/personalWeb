@@ -4,7 +4,7 @@ module.exports = {
     //devtool: "none", //changed since webpack 5, past the code as the original *decreases performance if you don't read this file better delete this line
     entry: "./src/index.js",
     output:{
-        filename: "main.js",
+        filename: "main.[contentHash].js",//[contentHash] to avoid the catching of the file perfect for PWA no for stat sities
         path: path.resolve(__dirname, "dist")
     },
     //Hot to use SCSS
