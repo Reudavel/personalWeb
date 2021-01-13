@@ -3,7 +3,10 @@ const path = require ("path");
 
 module.exports = {
     //devtool: "none", //changed since webpack 5, past the code as the original *decreases performance if you don't read this file better delete this line
-    entry: "./src/index.js",
+    entry: {
+        main: "./src/index.js",
+        vendor: "./src/vendor.js" //Second entrypoint for tirdparty code Javascript 
+    },
     //How to use SCSS
     module: {
         rules:[
@@ -23,10 +26,8 @@ module.exports = {
                     loader: "file-loader",
                     options: {
                         publicPath: "./", //To avoud path errors? 
-                        name: "[name].[ext]",
-                        //outputPath: "imgs" //Don't know how to custom output
-                       
-                    
+                        name: "[name].[hash].[ext]",// To rename in every load
+                        //outputPath: "imgs" //Creates a folder imgs in dist only in build         
                     }
                 } //When returns the releative path of the file
             }
