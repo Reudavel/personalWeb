@@ -12,6 +12,23 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"] //loaders to use
                 //[Inyects style into DOM,   Turns CSS in to Javascript,   Transpile SASS in to CSS]
                 //last executes first [3th,2nd,1st...]       
+            },
+            {
+                test: /\.html$/,
+                use: ["html-loader"] //Scann the html files as a text files
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        publicPath: "./", //To avoud path errors? 
+                        name: "[name].[ext]",
+                        //outputPath: "imgs" //Don't know how to custom output
+                       
+                    
+                    }
+                } //When returns the releative path of the file
             }
         ]
     },

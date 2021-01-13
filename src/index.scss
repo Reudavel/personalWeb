@@ -30,6 +30,12 @@
     scroll-behavior: smooth; /*Scroll suavecito :3 */
   }
   
+
+  .logo {
+    align-content: flex-start;
+    height: 70px;
+    width: 155px;
+  }
   /*Bsic Media Querys*/
   /* A few media query to set some font sizes at different screen sizes.
    * This helps automate a bit of responsiveness.
