@@ -10,12 +10,12 @@ module.exports = {
     //How to use SCSS
     module: {
         rules:[
-            {
+           /* {
                 test: /\.scss$/, //file extension
                 use: ["style-loader", "css-loader", "sass-loader"] //loaders to use
                 //[Inyects style into DOM,   Turns CSS in to Javascript,   Transpile SASS in to CSS]
                 //last executes first [3th,2nd,1st...]       
-            },
+            },*/
             {
                 test: /\.html$/,
                 use: ["html-loader"] //Scann the html files as a text files
@@ -33,12 +33,5 @@ module.exports = {
             }
         ]
     },
-    //Plugins: this is to generate an HTML file with the main.[contentHash].js script added
-    plugins: [ 
-        new HtmlWebpackPlugin(
-            {
-                template: "./src/template.html" //Use our HTML file to generate HTML index.html by default
-            }
-        )
-    ] 
+
 };
