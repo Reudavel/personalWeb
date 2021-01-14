@@ -1,12 +1,11 @@
 /* nav */
-.logo {
-    align-content: flex-start;
-    height: 70px;
-    width: 155px;
-  }
+/* nest its OK, afects all the elements that share class the inside parent even if they are not direct descendent*/
+/* we can use: > .class {} to affects only the fisrt direct child of the parent*/
+/* the parent selector & replaces the text of the .parent inside the style block great fot theming*/
   .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    /*justify-content: flex-end;*/
     position: fixed;
     top: 0;
     left: 0;
@@ -14,12 +13,26 @@
     background: var(--main-red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
+    .logo {
+      align-self: flex-start;
+      height: 70px;
+      width: 150px;
+    }
+    .nav-list {
+      display: flex;
+      margin-right: 2rem;
+      a {
+        display: block;
+        font-size: 2.2rem;
+        padding: 2rem;
+      }
+       a:hover {
+        background: var(--main-blue);
+      }
+    }
   }
   
-  .nav-list {
-    display: flex;
-    margin-right: 2rem;
-  }
+  
   
   @media (max-width: 28.75em) {
     .nav {
@@ -31,12 +44,3 @@
     }
   }
   
-  .nav-list a {
-    display: block;
-    font-size: 2.2rem;
-    padding: 2rem;
-  }
-  
-  .nav-list a:hover {
-    background: var(--main-blue);
-  }

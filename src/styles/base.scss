@@ -1,6 +1,22 @@
+/*name things by what they are and what they do SEMANTIC and Kabkacase , not how they look like*/
+/* _layout.scss _ in the name of a scss file is a partials and indicates to scss transpilers to not convert to css
+    because these files are made to be imported by another scss file*/
+
+/*coments string interpolation with #{hue(green)} the output of this in CSS coment would be 120deg*/
+
 /* Custom properties/variables  */
+/*
+$error_color: #FF0000 !default; /*this is a scss global variable
+!default; this word indicates that if the variable has been inizialited before it wont overrifding 
+if the variable has not been declared sets the default indicated value
+
+The variables inside a block have their own scope
+We can save in a variable everything valid CSS value ex. 15px, space-between, #000, etc... and strings, booleans, lists, and maps.
+Is recomended to have a partial excusive for global variables
+
+*/ 
 :root {
-    --main-white: #f0f0f0;
+    --main-white: #f0f0f0;//CSS variables syntax
     --main-red: #81bdbd;
     --main-blue: #586279;
     --main-gray: #7d8c9e;
