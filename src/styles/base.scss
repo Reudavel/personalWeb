@@ -13,6 +13,7 @@ if the variable has not been declared sets the default indicated value
 The variables inside a block have their own scope
 We can save in a variable everything valid CSS value ex. 15px, space-between, #000, etc... and strings, booleans, lists, and maps.
 Is recomended to have a partial excusive for global variables
+lists can save rule values like shadow or gradient params and you can create a list of list ex. (to 1,2),(to 14,16)
 
 */ 
 :root {
@@ -45,6 +46,53 @@ Is recomended to have a partial excusive for global variables
     font-size: 62.5%;
     scroll-behavior: smooth; /*Scroll suavecito :3 */
   }
+
+  /*MIXINS allow us to reuse sets of style rules, a function thath returns style, @include is the word to consume a @mixin
+  * _mixins.scss is recomend to separate in their own file, like _variables.scss and always bundle variables first
+  * mixin = style block{}
+  * ex. 
+
+  @text-color($color){              //We can use a default calue ex @text-color($color: green){}
+    color: $color;
+  }
+
+  div{
+    @include text-color($white);
+    background: black;
+  }
+
+
+  /*PLACEHOLDERS not recomend 3 leves deep this creates parents to simulate the mixin effect*/
+  /*@extend is equal to include the only diference is the CSS output that not repeat the code in each block where is called
+   
+  %text-color{              //WThis is a Placeholder and @extends used to share code as mixin but more efficient
+    color: white;                    just use when no variables are involved      
+  }
+
+   div{
+    @extend $text-color;     //This won't copy the code in CSS only will, create selectors and nest
+    background: black;
+  }
+
+
+
+  /*You can use @if for condition stylle blocks*/
+  /*@for iterates numbers. used to create repetitive rules ex. sizes, margin
+    @each iterates lists, a variable type. used to create similar rules that only changes a variable ex. colors)*/
+
+  /* Recmondeation use mixins for media querys
+  */
+
+
+/*Functons to create colors in the DOCs*/
+/*Custom function to solve some calculations have a @return mor info DOCs*/
+
+/*MAPS
+Are key value pair like a JSON used for create Themes passing the key to the
+ex.
+color: map-get($my-map, $key-value); this asign the value taht correspond to the key
+
+*/
 
   /* Base styles */
   body {
