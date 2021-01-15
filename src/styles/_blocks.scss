@@ -1,0 +1,37 @@
+/*FLEXBOX for blocks*/
+//https://static.frontendmasters.com/resources/2017-10-03-responsive-web-design-flexbox-css-grid/Flexbox-and-CSS-Grid-Properties-Cheat-Sheet.pdf
+
+/*flex-container*/
+/* behaivor of the container
+
+    flex-wrap: wrap; is used to adjust the item to the size of its content
+    flex-flow: row nowrap; combines the propeties of flex-direction and flex-wrap
+    justify-content: center; indicates the distribution of the items alog the main axis of the flex container
+    align-items: strech; indicate the distribution of the items alogn the cross axis, stresh fill all teh vertical spaces
+*/
+
+/*felx-items*/
+/* Ordering and how wide they are and how changue the size over dimensions (diferent sizes)
+
+    .item { order: 1; }
+        -1 item to the start of amin axis
+        0 is neutral
+        1 normal order
+        2 item to the end of main axis
+
+    .item{  flex-basis: 25%; } NEVER use width in flex items use flex-basis  !important
+        flex-basis is a relative width(%,vh, etc..), but not exact, It could be smaller or wider,
+        width  depending on the extra space and distribution (grows and shirnks)
+
+    .item{  flex-grow: ***; }
+        this element will get biger faster than others. higher number
+        there is no units it’s simply a proportion of how the item grows compared to the other items.
+
+    .item{  flex-shrink: ***; }
+        Flex-shrink controls what happens to extra space as elements shrink. 
+        this element will get smaller faster than the others. smaller number
+        Note there is no units proportion at the nomarl shirnk behaivor of a item.
+
+    shortcut = .item{  flex: flex-grow flex-shrink and flex-basis; } default: 0 1 auto
+
+*/

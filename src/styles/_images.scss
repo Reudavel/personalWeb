@@ -1,0 +1,12 @@
+/*
+picture tag HTML and inside image tag to serve the correct iamges ex.
+<   picture>
+		<source srcset="img/peace-pie-original.jpg" media="(min-width: 1200px)">
+		<source srcset="img/peace-pie-500.jpg" media="(min-width: 800px)">		
+		<img src="img/peace-pie-150.jpg" alt="The original giant peace pie">
+    </picture>
+    
+
+    For background images use CSS in a div and mediaquerys to conditon the image displayed
+    is important to set the high of the image manualy in the CSS rule
+*/
