@@ -2,6 +2,15 @@
 /* nest its OK, afects all the elements that share class the inside parent even if they are not direct descendent*/
 /* we can use: > .class {} to affects only the fisrt direct child of the parent*/
 /* the parent selector & replaces the text of the .parent inside the style block great fot theming*/
+
+/* CSS hamburger button code, h/t 
+https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793 
+
+Below is a starting navigation bar formatted for mobile and desktop. MQ is set to break where nav wraps once we've set up some typography... which we have not done yet. Trust the process :-)
+
+ <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a> //to make clickable the hole screen 
+*/
+
   .nav {
     display: flex;
     justify-content: space-between;

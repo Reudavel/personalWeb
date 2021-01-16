@@ -16,7 +16,7 @@ Is recomended to have a partial excusive for global variables
 lists can save rule values like shadow or gradient params and you can create a list of list ex. (to 1,2),(to 14,16)
 
 */ 
-:root {
+:root {// root means global varaibles (html tag)
     --main-white: #f0f0f0;//CSS variables syntax
     --main-red: #81bdbd;
     --main-blue: #586279;
